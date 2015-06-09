@@ -1,0 +1,172 @@
+/* Home Page */
+
+.home-static-images {
+	margin-top: 20px;
+	ul {
+		li {
+			float: left;
+			.home-image {
+				@include border-radius($default-border-radius);
+				border: 1px solid $gray-light;
+				overflow: hidden;
+				img {
+					width: 100%;
+				}
+			}
+			&:nth-child(2n + 1) {
+				display: none;
+			}
+		}
+	}
+}
+
+.home-product-carousel {
+	height: auto;
+	margin-top: 20px;
+	overflow: hidden;
+	width: 100%;
+	ul {
+		overflow-x: auto;
+		overflow-y: hidden;
+		li {
+			display: inline-block;
+			float: left;
+			margin-left: 5px !important;
+			&:nth-child(n + 3) {
+				display: none;
+			}
+			.home-product {
+				position: relative;
+				.triangle {
+					border-left: 40px solid transparent;
+					border-top: 40px solid $green;
+					height: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 0;
+					&.red {
+						border-top: 50px solid $red;
+					}
+				}
+				img {
+					height: auto;
+					width: 100%
+				}
+				.content {
+					padding: 15px 0;
+					h4 {
+						font-family: $font-family-alt;
+						font-size: 12px;
+						text-transform: uppercase;
+					}
+					p {
+						color: $black;
+					}
+					span {
+						display: block;
+					}
+					i {
+						margin-right: 2px;
+						&:before {
+							color: $ff-blue;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.home-media-row {
+	.home-media {
+		margin-top: 10px;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+@include respond-to(small) {
+	.home-static-images {
+		ul {
+			li {
+				margin-top: 0;
+				&:nth-child(2n + 1) {
+					display: block;
+				}
+			}
+		}
+	}
+	.home-product-carousel {
+		margin-top: 20px;
+		ul {
+			li {
+				margin-left: 20px !important;
+				&:first-child {
+					margin-left: 0 !important;	
+				}
+				&:nth-child(n + 3) {
+					display: block;
+				}
+				.home-product {
+					.triangle {
+						border-left: 30px solid transparent;
+						border-top: 30px solid $green;
+						&.red {
+							border-top: 30px solid $red;
+						}
+					}
+				}
+			}
+		}
+	}
+	.home-media-row {
+		.home-media {
+			margin-top: 0;
+		}
+	}
+}
+
+@include respond-to(medium) {
+	.home-product-carousel {
+		margin-top: 30px;
+		ul {
+			li {
+				.home-product {
+					.content {
+						h4 {
+							font-size: 14px;
+						}
+					}
+					.triangle {
+						border-left: 40px solid transparent;
+						border-top: 40px solid $green;
+						&.red {
+							border-top: 40px solid $red;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond-to(large) {
+	.home-product-carousel {
+		ul {
+			li {
+				.home-product {
+					.triangle {
+						border-left: 50px solid transparent;
+						border-top: 50px solid $green;
+						&.red {
+							border-top: 50px solid $red;
+						}
+					}
+				}
+			}
+		}
+	}
+}

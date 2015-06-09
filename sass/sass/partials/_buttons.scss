@@ -1,0 +1,14 @@
+/* Buttons */
+
+.btn {
+	@include border-radius(2px);
+	@include box-shadow(0 1px 0 0 $black);
+	background-color: $green;
+	color: $white;
+	font-family: $font-family-base;
+	font-size: 9px;
+	font-weight: $normal;
+	letter-spacing: 1.1px;
+	padding: 6px 10px;
+	text-transform: uppercase;
+}

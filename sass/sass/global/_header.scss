@@ -1,0 +1,180 @@
+/* Header */
+
+header {
+	display: block;
+	width: 100%;
+	.menu {
+		height: 50px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 50px;
+		.fa {
+			color: $ff-blue;
+			font-size: 22px;
+			padding: 10px;
+		}
+	}
+	.logo {
+		background: url('../../images/header/flat-friends-logo.png') no-repeat center center;
+		background-size: contain;
+		display: block;
+		height: 27px;
+		margin: -3px auto 0;
+		width: 54px;
+	}
+	.navs {
+		border-top: 1px solid $gray-light;
+		margin-top: 5px;
+		.main-nav {
+			@include clearfix;
+			display: none;
+			margin-top: 65px;
+			ul {
+				display: inline-block;
+				li {
+					float: left;
+					a {
+						display: block;
+						font-family: $font-family-alt;
+						font-size: 13px;
+						padding: 0 10px;
+						text-transform: uppercase;
+					}
+					&:last-child a {
+						padding-right: 0;
+					}
+				}	
+			}
+		}
+		.sub-nav {
+			margin-top: 15px;
+			ul {
+				display: table;
+				margin: 0 auto;
+				width: 320px;
+				li {
+					color: $ff-blue;
+					display: table-cell;
+					float: left;
+					font-size: 12px;
+					line-height: 12px;
+					padding: 0 10px;
+					position: relative;
+					a {
+						display: block;
+						font-family: $font-family-alt;
+						font-size: 10px;
+					}
+					ul {
+						display: none;
+						left: 0;
+						padding: 0;
+						position: absolute;
+						top: 100%;
+						li {
+							border: none;
+							float: none;
+							padding: 10px 20px 0;
+							width: 80px;
+							a {
+								
+							}
+						}
+					}
+					&.country {
+						a {
+							display: block;
+							height: 10px;
+							line-height: 0;
+							width: 20px;
+							img {
+								bottom: 0.5px;
+								position: absolute;
+							}
+						}
+					}
+					&.shopping-bag {
+						a {
+							display: block;
+							height: 10px;
+							line-height: 0;
+							width: 30px;
+							img {
+								bottom: 0.5px;
+								position: absolute;
+							}
+							.shopping-count {
+								font-family: $font-family-alt;
+								left: 14px;
+								position: relative;
+								top: 5px;
+							}
+						}
+					}
+					&:last-child {
+						border-right: 0;
+						padding-right: 0;
+					}
+					&:hover {
+						> ul {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond-to(small) {
+	.mobile {
+		display: none !important;
+	}
+	header {
+		width: 100%;
+		.logo {
+			float: left;
+			height: 116px;
+			margin: 0 auto;		
+			width: 231px;
+		}
+		.navs {
+			border: 0;
+			.sub-nav {
+				float: right;
+				ul {
+					width: auto;
+					li {
+						border-right: 1px solid $ff-blue;
+						padding: 0 20px;
+					}
+				}				
+			}
+			.main-nav {
+				float: right;
+				ul li a {
+					font-size: 12px;
+					padding: 0 5px;
+				}	
+			}
+		}
+	}
+}
+
+@include respond-to(medium) {
+	header {
+		.navs {
+			.sub-nav {
+					
+			}
+			.main-nav {
+				display: block;
+				ul li a {
+					font-size: 13px;
+					padding: 0 20px;
+				}
+			}
+		}
+	}
+}

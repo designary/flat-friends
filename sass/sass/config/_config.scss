@@ -1,0 +1,88 @@
+// Base Config
+// ----------------------
+
+// Compass Defaults
+// -------------------------
+$default-border-radius:     3px;
+
+
+// Typography
+// -------------------------
+$font-size-base:            14px !default;
+$font-size-large:           ceil($font-size-base * 1.5) !default;
+$font-size-small:           ceil($font-size-base * .85) !default;
+
+$font-family-base:          "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-alt:           "Conv_HelveticaNeueLTStd-Ex", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-awesome:           	"font-awesome" !default;
+
+$bold:						700;
+$semibold:					500;
+$normal:					400; 
+
+$line-height-base:          1.35 !default;
+$line-height-loose:         1.55 !default;
+$line-height-tight:         1.1 !default;
+
+
+// Base Colors
+// -------------------------
+$black:                     #000 !default;
+$white:                     #fff !default;
+$blue:                      #049cdb !default;
+$green:                     #63B10C !default;
+$red:                       #d62d20 !default;
+$yellow:                    #ffc40d !default;
+$orange:                    #f89406 !default;
+$pink:                      #c3325f !default;
+$purple:                    #7a43b6 !default;
+$gray-light:                #dedede !default;
+$gray-dark:	                #888 !default;
+
+// Flat Friends Colors
+// -------------------------
+$ff-blue:                   #3e5e6f !default;
+$ff-blue-alt:				#025a9a !default;
+$ff-highlight:			    #f26623 !default;
+
+
+// State colors
+// -------------------------
+$color-success:             #62c462 !default;
+$color-info:                #5bc0de !default;
+$color-warning:             #f89406 !default;
+$color-error:               #ee5f5b !default;
+
+
+// Scaffolding colors
+// -------------------------
+$color-text:                #333 !default;
+$color-meta:                #999 !default;
+$color-border:              darken($white, 15%) !default;
+
+
+// Links colors
+// -------------------------
+$color-link:                #08c !default;
+$color-link-hover:          darken($color-link, 15%) !default;
+
+
+// Spacing
+// -------------------------
+
+// Reading spacing
+$spacing-read-base:         10px !default;
+$spacing-read-loose:        $spacing-read-base * 2 !default;
+$spacing-read-tight:        $spacing-read-base / 2 !default;
+
+// Structure spacing
+$spacing-block-base:        20px !default;
+$spacing-block-loose:       $spacing-block-base * 1.5 !default;
+$spacing-block-tight:       $spacing-block-base / 2 !default;
+
+// Container Widths
+// -------------------------
+$container-small: 			481px;
+$container-medium:			992px;
+$container-large:			1220px;
+

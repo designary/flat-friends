@@ -1,0 +1,57 @@
+// Typography
+
+html {
+	font-family: $font-family-base;
+}
+h1, h2, h3, h4, h5, h6, p, a {
+	color: $ff-blue;
+	font-family: $font-family-base;
+}
+input {
+	font-family: $font-family-base;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	color: $ff-highlight;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 22px;
+	sup {
+		font-size: 12px;
+		line-height: 0;
+	}
+}
+
+h4 {
+	font-size: 18px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 14px;
+}
+
+p {
+	font-size: 12px;
+	line-height: $line-height-base;
+	padding: 10px 0;
+}
+p + p {
+	padding-top: 0;
+}

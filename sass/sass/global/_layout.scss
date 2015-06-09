@@ -1,0 +1,114 @@
+/* Layout */
+
+
+
+@include grid ($columns: 12, $column-width: 8%, $gutter-width: 0, $prefix: $grid-class-prefix, $fluid: false);
+
+.mobile {
+	display: block;
+}
+	
+.container {
+	@include container;
+	background-color: $white;
+	padding: 10px;
+	width: auto;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 100%;
+	}
+}
+
+.col-12, 
+.col-4 {
+	width: 100%;
+}
+.col-2 {
+	width: calc(50% - 5px);
+}
+[class|="col"] ~ [class|="col"] {
+	margin-left: 0;
+}
+
+footer .col-2, footer .col-3 {
+	width: 100%;
+}
+
+@include respond-to(small) {
+	@include grid ($columns: 12, $column-width: 42px, $gutter-width: 20px, $prefix: $grid-class-prefix, $fluid: false);
+	@include container ($min-width: $container-small, $max-width: $container-medium, $gutter-width: 20px, $fluid: false);
+	.container {
+		margin: 0 auto;
+	}
+	.row {
+		margin-top: 20px;
+	}
+	footer .col-2 {
+		margin-left: 20px;
+		width: (42*2)+20px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	footer .col-3 {
+		margin-left: 20px;
+		width: (42*3)+40px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+@include respond-to(medium) {
+	@include grid ($columns: 12, $column-width: 60px, $gutter-width: 20px, $prefix: $grid-class-prefix, $fluid: false);
+	@include container ($min-width: $container-medium, $max-width: $container-large, $gutter-width: 20px, $fluid: false);
+	.container {
+		margin: 0 auto;
+		padding: 20px;
+	}
+	.row {
+		margin-top: 20px;
+	}
+	footer .col-2 {
+		margin-left: 20px;
+		width: (60*2)+20px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	footer .col-3 {
+		margin-left: 20px;
+		width: (60*3)+40px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+@include respond-to(large) {
+	@include grid ($columns: 12, $column-width: 80px, $gutter-width: 20px, $prefix: $grid-class-prefix, $fluid: false);
+	@include container ($min-width: $container-large, $max-width: $container-large, $gutter-width: 20px, $fluid: false);
+	.container {
+		margin: 0 auto;
+		padding: 20px;
+		.row {
+			margin-top: 30px;
+		}
+	}
+	footer .col-2 {
+		margin-left: 20px;
+		width: (80*2)+20px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	footer .col-3 {
+		margin-left: 20px;
+		width: (80*3)+40px;
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}	

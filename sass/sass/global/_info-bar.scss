@@ -1,0 +1,157 @@
+/* Info Bar */
+
+.info-bar {
+	@include clearfix;
+	padding-top: 5px;
+	width: 100%;
+	.breadcrumb {
+		width: 100%;
+		ul {
+			li {
+				display: inline-block;
+				float: left;
+				a {
+					display: inline-block;
+					padding: 0 5px;
+					p {
+						font-size: 10px;
+						padding-top: 0;
+					}
+				}
+				&:after {
+					content: "/";
+					font-size: 10px;
+				}
+				&:first-child a {
+					padding-left: 0;
+				}
+				&:last-child:after {
+					content: " ";
+				}
+			}
+		}
+	}
+	.delivery-deal {
+		clear: both;
+		img {
+			display: none;
+			float: left;
+			margin-right: 10px;
+			padding-top: 10px;
+		}
+		p {
+			font-size: 10px;
+			font-weight: $semibold;
+			padding-top: 0;
+			text-transform: uppercase;
+		}
+	}
+	.search {
+		input {
+			@include border-radius($default-border-radius);
+			@include box-shadow(none);
+			border: 1px solid $gray-light;
+			color: $gray-dark;
+			font-size: 12px;
+			padding: 5px;
+			width: calc(100% - 12px);
+		}
+		button {
+			float: right;
+			margin: -24px 5px 0 0;
+			i:before {
+				color: $ff-blue;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+@include respond-to(small) {
+	.info-bar {
+		height: 60px;
+		position: relative;
+		.breadcrumb {
+			position: relative;
+			top: 30px;
+			width: auto;
+			ul {
+				li {
+					a { 
+						padding: 0 10px;
+						p {
+							font-size: 12px;
+							padding-top: 10px;
+						}
+					}
+					&:after {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		.delivery-deal {
+			clear: none;
+			display: block;
+			float: left;
+			left: 0;
+			padding-top: 10px;
+			position: relative;
+			top: -40px;
+			width: 100%;
+			img {
+				display: block;
+			}
+			p {
+				font-size: 12px;
+				padding-top: 10px;
+			}
+		}
+		.search {
+			float: right;
+			margin-top: -70px;
+			position: relative;
+			input {
+				padding: 5px;
+				position: relative;
+				right: -16px;
+				width: 200px;
+			}
+			button {
+				float: none;
+				margin: auto;
+				position: relative;
+				right: 6px;
+			}
+		}
+	}
+}
+
+@include respond-to(medium) {
+	.info-bar {
+		height: auto;
+		.breadcrumb {
+			float: left;
+			top: auto;
+			width: 33%;
+		}
+		.delivery-deal {
+			left: auto;
+			padding-top: 4px;
+			top: auto;
+			width: 380px;
+		}
+		.search {
+			margin-top: 9px;
+		}
+	}
+}
+
+@include respond-to(large) {
+	.info-bar {
+		.delivery-deal {
+			margin-left: 180px;
+		}	
+	}
+}	
+

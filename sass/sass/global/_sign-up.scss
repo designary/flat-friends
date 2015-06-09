@@ -1,0 +1,63 @@
+/* Sign Up */
+
+.donation {
+	margin-top: 10px;
+	h3 {
+		font-size: 16px;
+		line-height: $line-height-base;
+	}
+}
+.friend {
+	margin-top: 10px;
+	width: 100%;
+	h5 {
+		display: block;
+		float: left;
+		font-size: 14px;
+		line-height: $line-height-base;
+		
+	}
+	form {
+		@include clearfix;
+		clear: both;
+		margin-top: 5px;
+		float: left;
+		width: 100%;
+		input {
+			@include border-radius($default-border-radius);
+			border: 1px solid $gray-light;
+			color: $ff-blue;
+			float: left;
+			font-size: 12px;
+			padding: 5px 5px 4px;
+			width: calc(100% - 104px);
+		}
+		button {
+			margin-left: 10px;
+			width: 80px;
+		}
+	}
+}
+
+@include respond-to(small) {
+	.friend {
+		margin-top: 0;
+		width: 100%;
+		h5 {
+			font-size: 16px;
+			width: 350px;
+		}
+		form {
+			clear: none;
+			float: right;
+			margin-top: 0;
+			width: calc(100% - 360px);
+		}
+	}
+	.donation {
+		margin-top: 20px;
+		h3 {
+			font-size: 22px;
+		}
+	}
+}

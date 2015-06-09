@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+// Main Flat Friends CSS
+// - Defines core CSS and global files for all views
+// ---------------------------
+
+// 01. Base configs: Compass and Fly
+// 02. Utility: Common gutter spacing & margins
+// 03. 3rd party utility libraries
+// 04. Core UI
+// 05. Core patterns
+
+// ------------------------------------------------------
+// 01. Base Config
+// ------------------------------------------------------
+@import "compass";
+@import "compass/css3/user-interface";
+@import "config/config";
+
+//Reset CSS first thing....
+@import "global/reset";
+
+//Required
+@import "utilities/breakpoints";
+@import "utilities/grid";
+
+@include grid;
+
+//Partials
+@import "partials/buttons";
+
+//Global
+@import "global/layout";
+@import "global/header";
+@import "global/footer";
+@import "global/typography";
+@import "global/info-bar";
+@import "global/sign-up";
+
+//Sections
+@import "sections/home";
