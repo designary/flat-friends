@@ -41,11 +41,11 @@
                 <nav class="main-nav">
                 	<ul>
                     	<li><a href="#">Newborn</a>
-                            <div class="menu-wrapper">
+                            <div class="menu-wrapper hide">
                             	<ul class="col-2">
-                                	<li class="heading"><a href="new-arrivals">New Arrivals</a></li>
-                                    <li class="heading"><a href="new-arrivals">Sale</a></li>
-                                    <li class="heading"><a href="new-arrivals">Gift Packs</a></li>
+                                	<li class="heading"><a href="new-arrivals.html">New Arrivals</a></li>
+                                    <li class="heading"><a href="sale.html">Sale</a></li>
+                                    <li class="heading"><a href="gift-packs.html">Gift Packs</a></li>
                                 </ul>
                                 <ul class="col-2">
                                 	<li class="heading">Shop by Product</li>
@@ -98,7 +98,8 @@
         <div class="info-bar">
             <div class="breadcrumb">
             	<ul>
-                	<li><p>Home</p></li>
+                	<li><a href="index.html"><p>Home</p></a></li>
+                    <li><p>Checkout</p></li>
             	</ul>
             </div>
             <div class="delivery-deal"><img src="images/info-bar/delivery-truck.gif" height="12px" width="31px"><p>Free shipping on domestic deliveries over $100</p></div>
@@ -109,98 +110,156 @@
                 </form>
             </div>
         </div>
-        <div class="row col-12 home-static-images">
-            <ul>
-                <li class="col-4"><div class="home-image"><img src="images/home/home-page-image-1.jpg"></div></li>
-                <li class="col-4"><div class="home-image"><img src="images/home/home-page-image-2.jpg"></div></li>
-                <li class="col-4"><div class="home-image"><img src="images/home/home-page-image-3.jpg"></div></li>
-            </ul>
+        <div class="row checkout">
+            <div class="row milestone">
+            	<div class="col-2">&nbsp;</div>
+                <div class="col-8 milestone">   
+                    <div class="line">
+                        <div class="step-1 active"><a href=""></a><span>Basket</span></div>
+                        <div class="step-2"><a href=""></a><span>Your Details</span></div>
+                        <div class="step-3"><a href=""></a><span>Thank You</span></div>
+                    </div>
+                </div>
+                <div class="col-2">&nbsp;</div>
+            </div>
+        	
+            <div class="col-12 shopping-basket">
+            	<h1>Shopping basket</h1>
+            	<table class="checkout-table">
+                	<thead>
+                    	<tr>
+                            <th>Items</th>
+                            <th>Size</th>
+                            <th>Quantity</th>
+                            <th>Price Per Item</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                        	<td>German girl hand puppet <span class="remove">(remove)</span></td>
+                            <td>N/A</td>
+                            <td>
+                            	<select>
+                                	<option>1</option>
+                                    <option selected>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
+                            </td>
+                            <td>$18.95</td>
+                            <td>$31.80</td>
+                        </tr>
+                        <tr>
+                        	<td>Aboriginal boy hand puppet <span class="remove">(remove)</span></td>
+                            <td>N/A</td>
+                            <td>
+                            	<select>
+                                	<option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
+                            </td>
+                            <td>$15.95</td>
+                            <td>$15.95</td>
+                        </tr>
+                        <tr>
+                        	<td>Nambia girl hand puppet <span class="remove">(remove)</span></td>
+                            <td>N/A</td>
+                            <td>
+                            	<select>
+                                	<option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                </select>
+                            </td>
+                            <td>$18.95</td>
+                            <td>$18.95</td>
+                        </tr>
+                     </tbody>
+                     <tfoot>
+                        <tr>
+                        	<td colspan="3" class="extra"><input type="checkbox"> Pay an extra $5 and get it gift-wrapped, personalised with your name and recipient's name</td>
+                            <td>TOTAL</td>
+                            <td class="total-price">$66.70 <span>AUD</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
         </div>
-        <div class="row fluid home-product-carousel">
-            <ul>
-                <li class="col-2">
-                    <div class="home-product">
-                        <div class="triangle"></div>
-                        <img src="images/home/home-product-image.jpg">
-                        <div class="content">
-                            <h4>Product Name</h4>
-                            <p>This product can have a short description field</p>
-                            <span class="price"></span>
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-2">
-                    <div class="home-product">
-                        <div class="triangle"></div>
-                        <img src="images/home/home-product-image.jpg">
-                        <div class="content">
-                            <h4>Product Name</h4>
-                            <p>This product can have a short description field</p>
-                            <span class="price"></span>
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-2">
-                    <div class="home-product">
-                        <div class="triangle red"></div>
-                        <img src="images/home/home-product-image.jpg">
-                        <div class="content">
-                            <h4>Product Name</h4>
-                            <p>This product can have a short description field</p>
-                            <span class="price"></span>
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-2">
-                    <div class="home-product">
-                        <div class="triangle"></div>
-                        <img src="images/home/home-product-image.jpg">
-                        <div class="content">
-                            <h4>Product Name</h4>
-                            <p>This product can have a short description field</p>
-                            <span class="price"></span>
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-2">
-                    <div class="home-product">
-                        <div class="triangle"></div>
-                        <img src="images/home/home-product-image.jpg">
-                        <div class="content">
-                            <h4>Product Name</h4>
-                            <p>This product can have a short description field</p>
-                            <span class="price"></span>
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-2">
-                    <div class="home-product">
-                        <div class="triangle"></div>
-                        <img src="images/home/home-product-image.jpg">
-                        <div class="content">
-                            <h4>Product Name</h4>
-                            <p>This product can have a short description field</p>
-                            <span class="price"></span>
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half"></i>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div> 
-
-		<div class="row col-12 home-media-row">
-            <ul>
-                <li class="col-4"><div class="home-media"><img src="images/home/home-page-video.jpg"></div></li>
-                <li class="col-4"><div class="home-media"><img src="images/home/home-page-website.png"></div></li>
-                <li class="col-4"><div class="home-media"><img src="images/home/home-page-good-for-business.png"></div></li>
-            </ul>
+        <div class="row checkout">
+        	<div class="col-7">
+            	<div class="promo-code egift">
+                	<label>E-Gift Voucher Code: </label>
+                    <input type="text" maxlength="40">
+                    <button type="submit" class="btn blue">Enter code</button>
+                </div>
+                <div class="promo-code promo">
+                	<label>Promo Code: </label>
+                    <input type="text" maxlength="50">
+                    <button type="submit" class="btn blue">Enter code</button>
+                </div>
+            </div>
+            <div class="col-3">
+            	<div class="btn blue">Continue Shopping</div>
+            </div>
+            <div class="col-2">
+            	<div class="btn blue">Check Out</div>
+            </div>
         </div>
-        
+        <div class="row interest-items">
+        	<div class="heading">You may also be interested in these items</div>
+        	<div class="col-4">
+            	<div class="col-2 thumb">
+                	<a href="product-item.html"><img src="images/products/puppet-chinese-girl.jpg"></a>
+                </div>
+                <div class="col-2 text">
+                	<a href="product-item.html"><h4>Chinese girl hand puppet</h4></a>
+                    <p>Available</p>
+                    <p class="price">$18.95 AUD</p>
+                </div>
+            </div>
+            <div class="col-4">
+            	<div class="col-2 thumb">
+                	<a href="product-item.html"><img src="images/products/puppet-arab-boy.jpg"></a>
+                </div>
+                <div class="col-2 text">
+                	<a href="product-item.html"><h4>Arab boy hand puppet</h4></a>
+                    <p>Available</p>
+                    <p class="price">$18.95 AUD</p>
+                </div>
+            </div>
+            <div class="col-4">
+            	<div class="col-2 thumb">
+                	<a href="product-item.html"><img src="images/products/puppet-indian-girl.jpg"></a>
+                </div>
+                <div class="col-2 text">
+                	<a href="product-item.html"><h4>Indian girl hand puppet</h4></a>
+                    <p>Available</p>
+                    <p class="price">$18.95 AUD</p>
+                </div>
+            </div>
+        </div>
         <div class="row donation">
             <h3>Flat Friends<sup>&reg;</sup> has heart and passion: a uniquely Australian brand. Donating 10% of its profit to children in need and wildlife.</h3>
         </div>

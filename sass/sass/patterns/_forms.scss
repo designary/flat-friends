@@ -1,0 +1,31 @@
+/* Tabs */
+
+input[type="checkbox"] {
+	@include border-radius(2px);
+	border: 1px solid $gray-light;
+	display: block;
+	float: left;
+	height: 16px;
+	margin-right: 5px;
+	width: 16px;
+}
+form {
+	position: relative;
+}
+.question {
+	position: absolute;
+	right: 10px;
+	top: 4px;
+}
+	
+
+@include respond-to(small) {
+	
+}
+
+@include respond-to(medium) {
+	
+}
+
+@include respond-to(large) {
+}

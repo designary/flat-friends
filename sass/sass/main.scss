@@ -28,6 +28,7 @@
 
 //Partials
 @import "partials/buttons";
+@import "partials/helpers";
 
 //Global
 @import "global/layout";
@@ -37,5 +38,15 @@
 @import "global/info-bar";
 @import "global/sign-up";
 
+//Patterns 
+@import "patterns/forms";
+@import "patterns/lightbox";
+@import "patterns/tables";
+@import "patterns/tabs";
+@import "patterns/tooltip";
+
 //Sections
+@import "sections/checkout";
 @import "sections/home";
+@import "sections/product-item";
+@import "sections/product-listing";

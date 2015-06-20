@@ -1,0 +1,63 @@
+/* Lightbox */
+
+.lightbox-background {
+	background-color: transparentize($black, 0.25);
+	display: block;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+
+.lightbox-component {
+	background-color: $white;
+	height: 280px;
+	left: calc((100% - 580px)/2);
+	padding: 50px;
+	position: fixed;
+	top: calc((100% - 400px)/2);
+	width: 500px;
+	z-index: 1001;
+	h1 {
+		color: $ff-blue;
+		font-family: $font-family-alt;
+		font-size: 20px;
+		margin-bottom: 30px;
+		text-align: center;
+		width: 100%;
+	}
+	p {
+		margin-bottom: 20px;
+		padding: 0;
+	}
+	input[type="text"] {
+		@include border-radius(2px);
+		border: 1px solid $gray-light;
+		color: $ff-blue;
+		font-size: 12px;
+		padding: 7px;
+		position: relative;
+		width: 100%;
+	}
+	.close {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		a {
+			line-height: 1;
+		}
+		i:before {
+			color: $ff-blue;
+		}
+	}
+}
+
+@include respond-to(small) {
+}
+
+@include respond-to(medium) {
+}
+
+@include respond-to(large) {
+}

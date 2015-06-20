@@ -2,33 +2,45 @@
 
 html {
 	font-family: $font-family-base;
+	line-height: $line-height-base;
 }
-h1, h2, h3, h4, h5, h6, p, a {
+
+h1, h2, h3, h4 {
+	color: $ff-blue;
+	font-family: $font-family-alt;
+	line-height: $line-height-base;
+}
+
+h5, h6, p, a {
 	color: $ff-blue;
 	font-family: $font-family-base;
+	line-height: $line-height-base;
 }
+
 input {
 	font-family: $font-family-base;
 }
 
-a {
+label, input, a {
+	color: $ff-blue;
 	text-decoration: none;
 }
 
 a:hover {
-	color: $ff-highlight;
+	color: $orange;
+	@include transition(color, 0.2s);
 }
 
 h1 {
-	font-size: 48px;
+	font-size: 32px;
 }
 
 h2 {
-	font-size: 26px;
+	font-size: 20px;
 }
 
 h3 {
-	font-size: 22px;
+	font-size: 18px;
 	sup {
 		font-size: 12px;
 		line-height: 0;
@@ -36,15 +48,15 @@ h3 {
 }
 
 h4 {
-	font-size: 18px;
-}
-
-h5 {
 	font-size: 16px;
 }
 
-h6 {
+h5 {
 	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
 }
 
 p {
@@ -54,4 +66,49 @@ p {
 }
 p + p {
 	padding-top: 0;
+}
+
+@include respond-to(small) {
+	
+}
+
+@include respond-to(medium) {
+	h1 {
+		font-size: 40px;
+	}
+	
+	h2 {
+		font-size: 24px;
+	}
+	
+	h3 {
+		font-size: 20px;
+	}	
+}
+
+@include respond-to(large) {
+	
+	h1 {
+		font-size: 48px;
+	}
+	
+	h2 {
+		font-size: 26px;
+	}
+	
+	h3 {
+		font-size: 22px;
+	}
+	
+	h4 {
+		font-size: 18px;
+	}
+	
+	h5 {
+		font-size: 16px;
+	}
+	
+	h6 {
+		font-size: 14px;
+	}	
 }
