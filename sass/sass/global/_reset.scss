@@ -27,17 +27,54 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+} 
 
 body {
     line-height: 1;
 }
 
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a:visited {
+	color: $ff-blue;
+}
+
 ol, ul {
     list-style: none;
+}
+
+sup {
+	font-size: 70%;
+}
+
+strong {
+	font-weight: $bold;
+}
+
+hr {
+  @include box-sizing(content-box);
+  height: 0;
+}
+
+img {
+  border: 0;
 }
 
 blockquote, q {
@@ -56,9 +93,68 @@ table {
 }
 
 button {
+	background: none;
     border: none;
     outline: none;
+	overflow: visible;
     padding: 0;
-    margin: 0;
-    background: none;
+    margin: 0;    
+}
+
+button, select, textarea, fieldset, form, label, legend, input {
+	-webkit-appearance: none;
+	 @include box-sizing(border-box); /* For legacy WebKit based browsers */
+	 color: inherit;
+	 font: inherit;
+	 margin: 0;
+	 text-transform: none;
+	 &:focus {
+	 	outline: none;
+	 }
+}
+	 
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+	cursor: pointer; /* 3 */
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input[type="checkbox"] {
+	-webkit-appearance: checkbox;
+}
+input[type="radio"] {
+	-webkit-appearance: radio;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	@include box-sizing(border-box); /* For legacy WebKit based browsers */
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+textrea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+[hidden],
+template {
+  display: none;
 }

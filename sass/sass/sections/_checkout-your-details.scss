@@ -1,0 +1,74 @@
+/* Checkout - Your Details*/
+
+.checkout-your-details {
+	h1 {
+		display: block;
+		margin-bottom: 20px;
+	}
+	.payment {
+		position: relative;
+		.cover {
+			background: transparentize($white, 0.2);
+			height: 103%;
+			left: -3%;
+			position: absolute;
+			top: 0;
+			width: 103%;
+			z-index: 200;
+		}
+	}
+	.payment, .delivery, .review {
+		margin-bottom: 60px;
+	}
+	.tab-component {
+		.tab-navigation {
+			li {
+				padding: 8px 10px;
+				img {
+					@include opacity(1);
+				}
+				&:hover img {
+					@include opacity(0.6);
+					@include transition(opacity, 0.2s);
+				}
+			}
+		}
+		.tab-content {
+			padding-top: 10px;
+			top: -8px;
+			.form-list .fields:last-child {
+				padding-bottom: 0;
+			}
+			.payment-options-row {
+				@include clearfix;
+				display: block;
+				padding: 10px 0;
+				width: 100%;
+				li {
+					display: inline-row;
+					float: left;
+					padding-right: 10px;
+					img {
+						height: auto;
+						width: 60px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond-to(small) {
+	.checkout-your-details {	
+		.payment, .delivery, .review {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@include respond-to(medium) {
+}
+
+@include respond-to(large) {
+	
+}

@@ -1,0 +1,9 @@
+/* Helpers */
+
+.hide {
+	display: none !important;
+}
+
+.clear {
+	@include clearfix;
+}

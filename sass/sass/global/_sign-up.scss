@@ -3,6 +3,7 @@
 .donation {
 	margin-top: 10px;
 	h3 {
+		font-family: $font-family-base;
 		font-size: 16px;
 		line-height: $line-height-base;
 	}
@@ -23,7 +24,7 @@
 		margin-top: 5px;
 		float: left;
 		width: 100%;
-		input {
+		input[type="text"] {
 			@include border-radius($default-border-radius);
 			border: 1px solid $gray-light;
 			color: $ff-blue;
@@ -33,6 +34,7 @@
 			width: calc(100% - 104px);
 		}
 		button {
+			@extend %btn;
 			margin-left: 10px;
 			width: 80px;
 		}
@@ -55,7 +57,7 @@
 		}
 	}
 	.donation {
-		margin-top: 20px;
+		margin-top: 60px;
 		h3 {
 			font-size: 22px;
 		}

@@ -153,9 +153,87 @@ header {
 			}
 			.main-nav {
 				float: right;
-				ul li a {
-					font-size: 12px;
-					padding: 0 5px;
+				ul li {
+					a {
+						font-size: 12px;
+						padding: 0 5px;
+					}
+					.menu-wrapper {
+						@include box-shadow(0 3px 80px 3px rbga(0,0,0,0.1));
+						background-color: scale-lightness($ff-blue, 30);
+						display: block;
+						padding: 0 20px 20px 0;
+						position: absolute;
+						top: 130px;
+						z-index: 10000000;
+						zoom: 1;
+						ul.col-2 {
+							float: left;
+							padding-left: 20px;
+							li {
+								color: $white;
+								display: block;
+								float: none;
+								padding: 5px 0;
+								&.heading {
+									display: block;
+									font-family: $font-family-alt;
+									font-size: 12px;
+									padding-top: 20px;
+									text-transform: uppercase;
+									a {
+										display: block;
+										font-family: $font-family-alt;
+										font-size: 12px;
+										text-transform: uppercase;
+									}
+								}
+								a {
+									color: $white;
+									font-family: $font-family-base;
+									font-size: 12px;
+									opacity: 1;
+									padding: 0;
+									text-transform: none;
+									&:hover {
+										opacity: 0.8;
+										@include transform(opacity, 0.3s);
+									}
+								}
+								.two-col-wrapper {
+									display: inline-block;
+									ul {
+										margin-left: 0;
+										padding: 0;
+										li:first-child {
+											padding-top: 0;
+										}
+									}
+								}
+							}
+							&:first-child {
+								background: url('../../images/header/nav-bear.png') no-repeat 20px 90% (scale-lightness($ff-blue, 55));
+								height: 100%;
+								left: 0;
+								position: absolute;
+							}
+							&:nth-child(2) {
+								margin-left: 143px;
+							}
+						}
+						
+						&:before {
+							border-bottom: 8px solid (scale-lightness($ff-blue, 55));
+						 	border-left: 8px solid transparent;
+							border-right: 8px solid transparent;
+							content: " ";
+							height: 0;
+							left: 50px;
+							position: absolute; 
+							top: -8px;
+							width: 0;
+						}
+					}
 				}	
 			}
 		}
@@ -170,9 +248,23 @@ header {
 			}
 			.main-nav {
 				display: block;
-				ul li a {
-					font-size: 13px;
-					padding: 0 20px;
+				ul li {
+					a {
+						font-size: 13px;
+						padding: 0 20px;
+					}
+					.menu-wrapper {
+						ul.col-2 {
+							li {
+								&.heading {
+									font-size: 14px;
+								}
+							}
+							&:nth-child(2) {
+								margin-left: 185px;
+							}
+						}
+					}
 				}
 			}
 		}

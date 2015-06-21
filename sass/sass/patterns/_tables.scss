@@ -1,0 +1,112 @@
+/* Tables */
+
+table {
+	color: $ff-blue;
+	width: 100%;
+	tr {
+		border-bottom: 1px solid $gray-light;
+	}
+	.heading {
+		font-weight: $bold;
+	}
+}
+table.tab-table {
+	td {
+		font-size: 11px;
+		padding: 15px 0;
+	}
+	.notice {
+		border-bottom: none;
+		td {
+			padding-bottom: 0;
+		}
+		div {
+			@include border-radius(2px);
+			font-style: italic;
+			font-weight: $bold;
+			line-height: $line-height-loose;
+			margin-bottom: 10px;
+			padding: 10px 20px;
+			&.primary {
+				background-color: tint($yellow, 90%);
+				border: 1px solid (shade($yellow, 3%));
+				color: $brown;
+			}
+			&.secondary {
+				background-color: tint($gray-light, 10%);
+				color: $black;
+				margin-bottom: 0;
+				text-align: center;
+			}
+		}
+	}
+}
+table.review-table {
+	thead {
+		th {
+			font-size: 11px;
+			font-weight: $bold;
+			padding: 15px 5px;
+			text-align: left;
+		}
+	}
+	tr {
+		border-bottom: 1px solid $gray-light;
+	}
+	td {
+		padding: 15px 5px;	
+		&:nth-child(2) {
+			text-align: right;
+		}
+	}
+	tfoot {
+		background-color: tint($blue, 95%);
+		font-size: 11px;
+		font-weight: $bold;
+	}
+	p {
+		font-size: 11px;
+		line-height: $line-height-loose;
+		padding: 0;
+	}
+}
+
+table.checkout-table {
+	thead {
+		th {
+			font-size: 11px;
+			font-weight: $bold;
+			padding: 15px 3px;
+			text-align: left;
+		}
+	}
+	tr {
+		border-bottom: 1px solid $gray-light;
+	}
+	td {
+		font-size: 11px;
+		padding: 15px 3px;
+		select {
+			background: url(../../images/global/dropdown-arrow.png) no-repeat 90%;
+			margin-top: -6px;
+			min-width: 40px;
+			padding: 5px;
+			position: absolute;
+		}
+	}
+	.remove {
+		font-size: 10px;
+		text-decoration: underline;
+	}
+	tfoot {
+		font-weight: $bold;
+		input[type="checkbox"] {
+			float: left;
+			margin-right: 10px;
+		}
+		.extra {
+			font-weight: $normal;
+			line-height: 1.5;
+		}
+	}
+}

@@ -1,0 +1,55 @@
+/* My Account */
+
+.my-account {
+	h1 {
+		display: block;
+		font-size: 16px;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+	}
+	h2 {
+		font-size: 14px;
+		font-weight: $bold;
+		text-transform: uppercase;
+	}
+	.existing-customer {
+		margin-bottom: 20px;
+		padding-left: 0;
+	}
+	.new-customer {
+		margin-bottom: 20px;
+		padding-right: 0;
+		.container-box {
+			background-color: $ff-blue;
+			color: $white;
+			h2, p {
+				color: $white;
+			}
+			p {
+				letter-spacing: 0.25px;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@include respond-to(small) {
+	.my-account {
+		.existing-customer {
+			margin-bottom: 0;
+			margin-left: 0;
+			padding-left: 120px;
+		}
+		.new-customer {
+			margin-bottom: 0;
+			padding-right: 120px;
+		}
+	}
+}
+
+@include respond-to(medium) {
+}
+
+@include respond-to(large) {
+	
+}

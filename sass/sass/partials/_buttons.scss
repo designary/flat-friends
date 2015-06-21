@@ -1,14 +1,62 @@
 /* Buttons */
 
-.btn {
+%btn {
 	@include border-radius(2px);
 	@include box-shadow(0 1px 0 0 $black);
 	background-color: $green;
 	color: $white;
 	font-family: $font-family-base;
-	font-size: 9px;
+	font-size: 8px;
 	font-weight: $normal;
 	letter-spacing: 1.1px;
+	padding: 7px 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.btn {
+	@extend %btn;
+	&.green {
+		background-color: $green;
+		&:hover {
+			background-color: shade($green, 15%);
+		}
+	}
+	&.blue {
+		background-color: $ff-blue;
+		&:hover {
+			background-color: shade($ff-blue, 15%);
+		}
+	}
+	&.blue-inverse {
+		background-color: $white;
+		color: $ff-blue;
+		&:hover {
+			background-color: $green;
+			color: $white; 
+		}
+	}
+	&.fullwidth {
+		width: 100%;
+	}
+	&.large {
+		font-size: 11px;
+		padding: 12px 40px;
+	}
+}
+
+.ghost-button {
+	@include border-radius(12px);
+	border: 1px solid $ff-blue;
+	color: $ff-blue;
+	display: inline-block;
+	font-size: 10px;
+	font-weight: $bold;
 	padding: 6px 10px;
 	text-transform: uppercase;
+	&:hover {
+		border-color: $green;
+		color: $green;
+		@include transition(all, 0.2s);
+	}
 }

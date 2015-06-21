@@ -1,0 +1,84 @@
+/* Tabs */
+
+.tab-component {
+	.tab-navigation {
+		-webkit-overflow-scrolling: touch;
+		overflow-x: scroll;
+		position: relative;
+		z-index: 100;
+		ul {
+			display: inline-block;
+			overflow: visible;
+			text-align: justify;
+			width: 700px;
+			&:after {
+				content: "";
+				display: inline-block;
+				width: 100%;
+			}
+		}
+		li {
+			display: inline-block;
+			float: left;
+			font-size: 12px;
+			font-weight: $bold;
+			margin: 0;
+			padding: 10px 10px 0;
+			width: auto;
+			&.active {
+				a {
+					color: $orange;
+				}
+			}
+		}
+	}
+	.tab-content {
+		border: 1px solid $gray-light;
+		padding: 20px;
+		position: relative;
+		top: -3px;
+		z-index: 0;
+	}
+}
+
+@include respond-to(small) {
+	.tab-component {
+		.tab-navigation {
+			overflow-x: hidden;
+			position: relative;
+			z-index: 100;
+			ul {
+				text-justify: auto;
+				width: auto;
+				&:after {
+					display: none;
+				}
+			}
+			li {
+				padding: 10px;
+				&.active {
+					@include border-radius(5px 5px 0 0);
+					background-color: $white;
+					border: 1px solid $gray-light;
+					border-bottom: 1px solid $white;
+					a {
+						color: $ff-blue;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond-to(medium) {
+	.tab-component {
+		.tab-navigation {
+			li {
+				padding: 10px 25px;
+			}
+		}
+	}
+}
+
+@include respond-to(large) {
+}

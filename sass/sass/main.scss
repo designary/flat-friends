@@ -28,6 +28,7 @@
 
 //Partials
 @import "partials/buttons";
+@import "partials/helpers";
 
 //Global
 @import "global/layout";
@@ -37,5 +38,24 @@
 @import "global/info-bar";
 @import "global/sign-up";
 
+//Patterns 
+@import "patterns/anchor-list";
+@import "patterns/forms";
+@import "patterns/lightbox";
+@import "patterns/tables";
+@import "patterns/tabs";
+@import "patterns/tooltip";
+
 //Sections
+@import "sections/checkout";
+@import "sections/checkout-your-details";
+@import "sections/checkout-thankyou";
+@import "sections/create-an-account";
+@import "sections/egift-voucher";
 @import "sections/home";
+@import "sections/information-side-nav";
+@import "sections/info-page";
+@import "sections/my-account";
+@import "sections/our-story";
+@import "sections/product-item";
+@import "sections/product-listing";

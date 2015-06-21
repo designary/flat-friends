@@ -2,7 +2,7 @@
 
 .info-bar {
 	@include clearfix;
-	padding-top: 5px;
+	padding: 5px 0 20px;
 	width: 100%;
 	.breadcrumb {
 		width: 100%;
@@ -10,20 +10,25 @@
 			li {
 				display: inline-block;
 				float: left;
-				a {
+				a, p {
 					display: inline-block;
-					padding: 0 5px;
-					p {
-						font-size: 10px;
-						padding-top: 0;
-					}
-				}
-				&:after {
-					content: "/";
 					font-size: 10px;
 				}
-				&:first-child a {
-					padding-left: 0;
+				a { 
+					p {
+						color: $ff-blue;
+						font-size: 10px;
+					}
+					&:hover p {
+						color: $orange;
+						@include transition(color, 0.2s);
+					}	
+				}	
+				&:after {
+					content: "/";
+					display: inline-block;
+					font-size: 10px;
+					padding: 0 3px 0 4px;
 				}
 				&:last-child:after {
 					content: " ";
@@ -54,7 +59,7 @@
 			color: $gray-dark;
 			font-size: 12px;
 			padding: 5px;
-			width: calc(100% - 12px);
+			width: calc(100%);
 		}
 		button {
 			float: right;
@@ -70,6 +75,7 @@
 @include respond-to(small) {
 	.info-bar {
 		height: 60px;
+		padding-bottom: 0;
 		position: relative;
 		.breadcrumb {
 			position: relative;
@@ -77,15 +83,17 @@
 			width: auto;
 			ul {
 				li {
-					a { 
-						padding: 0 10px;
+					a, p { 
+						font-size: 12px;
 						p {
 							font-size: 12px;
-							padding-top: 10px;
 						}
 					}
 					&:after {
+						content: "/";
+						display: inline-block;
 						font-size: 12px;
+						padding: 0 5px 0 6px;
 					}
 				}
 			}
