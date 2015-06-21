@@ -1,6 +1,17 @@
-/* Tabs */
+/* Forms */
 
-input[type="checkbox"] {
+.container-box {
+	border: 1px solid $gray-light;
+	padding: 30px;
+	position: relative;
+	.row {
+		margin-top: 10px;
+		position: relative;
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"] {
 	@include border-radius(2px);
 	border: 1px solid $gray-light;
 	display: block;
@@ -9,9 +20,124 @@ input[type="checkbox"] {
 	margin-right: 5px;
 	width: 16px;
 }
+
+input[type="radio"] {
+	@include border-radius(50%);
+	left: 1px;
+	position: relative;
+}
+
+input[type="checkbox"] + label {
+	padding: 0;
+}
+
+input[type="radio"] + label {
+	padding: 3px 0;
+}
+
+input[type="text"],
+input[type="password"] {
+	@include border-radius(2px);
+	border: 1px solid $gray-light;
+	color: $ff-blue;
+	font-size: 12px;
+	padding: 7px;
+	position: relative;
+	width: 100%;
+}
+
+select {
+	@include border-radius(2px);
+	background: url(../../images/global/dropdown-arrow.png) no-repeat 90%;
+	font-size: 12px;
+	margin-top: -6px;
+	padding: 7px;
+	position: absolute;
+}
+
 form {
 	position: relative;
 }
+
+.legend {
+	border-bottom: 1px solid $gray-light;
+	border-top: 1px solid $gray-light;
+	font-size: 11px;
+	font-weight: $bold;
+	letter-spacing: 0.8px;
+	margin-bottom: 5px;
+	padding: 12px 0 10px;
+}
+
+.legend + .tab-component {
+	margin: 30px 0;
+}
+
+.form-list {
+	.fields {
+		@include clearfix;
+		overflow: visible;
+		padding: 10px 0 0;
+		position: relative;
+		&.empty {
+			display: none;
+		}
+		&:last-child {
+			padding: 10px 0 50px;
+		}
+		.question {
+			right: 7px;
+			top: 47px;
+		}
+	}
+	.inner-field {
+		@include clearfix;
+		overflow: visible;
+		padding: 10px 0 30px;
+		position: relative;
+	}
+	label {
+		display: block;
+		font-size: 12px;
+		padding: 10px 0;
+		width: 100%;
+		span.small {
+			font-size: 10px;
+		}
+	}
+	input[type="text"] {
+		@include clearfix;
+	}
+	textarea {
+		border: 1px solid $gray-light;
+		font-size: 12px;
+		min-height: 100px;
+		padding: 10px;
+		width: 100%;
+	}
+	.half-col {
+		display: inline-block;
+		float: left;
+		width: 50%;
+		select {
+			width: calc(100% - 5px);
+		}
+	}
+	select {
+		@include clearfix;
+		background-position: 97%;
+		position: relative;
+		width: 100%;
+	}
+}
+
+.required {
+	&:before {
+		color: $red;
+		content: "* ";
+	}
+}
+
 .question {
 	position: absolute;
 	right: 10px;
@@ -20,7 +146,14 @@ form {
 	
 
 @include respond-to(small) {
-	
+	.form-list {
+		.fields {
+			&.empty {
+				display: block;
+				height: 62px;
+			}
+		}
+	}
 }
 
 @include respond-to(medium) {

@@ -28,8 +28,20 @@
 			background-color: shade($ff-blue, 15%);
 		}
 	}
+	&.blue-inverse {
+		background-color: $white;
+		color: $ff-blue;
+		&:hover {
+			background-color: $green;
+			color: $white; 
+		}
+	}
 	&.fullwidth {
 		width: 100%;
+	}
+	&.large {
+		font-size: 11px;
+		padding: 12px 40px;
 	}
 }
 

@@ -45,8 +45,22 @@ footer,
 	}
 }
 
+.my-account {
+	.col-6 {
+		width: 100%;
+	}
+}
+
 .checkout {
 	.col-7 {
+		width: 100%;
+	}
+}
+
+.create-an-account,
+.terms,
+.faqs {
+	.col-8 {
 		width: 100%;
 	}
 }
@@ -85,11 +99,30 @@ footer,
 			}
 		}
 	}
-	
+	.my-account {
+		.col-6 {
+			margin-left: 20px;
+			width: (42*6)+(20px*5);
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
 	.checkout {
 		.col-7 {
 			margin-left: 20px;
 			width: (42*7)+(20px*6);
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.create-an-account,
+	.terms,
+	.faqs {
+		.col-8 {
+			margin-left: 20px;
+			width: (42*8)+(20px*7);
 			&:first-child {
 				margin-left: 0;
 			}
@@ -130,6 +163,26 @@ footer,
 		.col-3 {
 			margin-left: 20px;
 			width: (60*3)+(20px*2);
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.my-account {
+		.col-6 {
+			margin-left: 20px;
+			width: (60*6)+(20px*5);
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.create-an-account,
+	.terms,
+	.faqs {
+		.col-8 {
+			margin-left: 20px;
+			width: (60*8)+(20px*7);
 			&:first-child {
 				margin-left: 0;
 			}
@@ -181,10 +234,30 @@ footer,
 			}
 		}
 	}
+	.my-account {
+		.col-6 {
+			margin-left: 20px;
+			width: (80*6)+(20px*5);
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
 	.checkout {
 		.col-7 {
 			margin-left: 20px;
 			width: (80*7)+(20px*6);
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.create-an-account,
+	.terms,
+	.faqs {
+		.col-8 {
+			margin-left: 20px;
+			width: (80*8)+(20px*7);
 			&:first-child {
 				margin-left: 0;
 			}

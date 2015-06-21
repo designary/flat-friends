@@ -1,0 +1,82 @@
+/* Anchor list */
+
+ol.anchor-list,
+ol.anchor-list-block {
+	list-style-type: none;
+	padding-right: 0;
+	li {
+		counter-increment: step-counter;
+		&::before {
+			color: $ff-blue;
+			content: counter(step-counter) ". ";
+			font-size: 12px;
+			margin-right: 5px;
+		}
+	}
+	a {
+		font-size: 12px;
+	}
+}
+
+ol.anchor-list {
+	display: inline-block;
+	margin: 30px 0 0;
+	li {
+		border-bottom: 1px solid $ff-blue;
+		clear: both;
+		display: inline-block;
+		float: left;
+		margin-bottom: 20px;
+		width: auto;
+		&:hover {
+			border-color: $orange;
+			color: $orange;
+			a {
+				color: $orange;
+			}
+			&::before {
+				color: $orange;
+			}
+		}
+	}
+}
+
+ol.anchor-list-block {
+	clear: both;
+	margin: 60px 0 0;
+	li {
+		counter-increment: step-counter;
+		margin-bottom: 20px;
+		&::before {
+			color: $ff-blue;
+			content: counter(step-counter) ". ";
+			font-size: 12px;
+			font-weight: $bold;
+			margin-right: 5px;
+		}
+		span {
+			color: $ff-blue;
+			font-size: 12px;
+			font-weight: $bold;
+		}
+		p.top {	
+			a {
+				font-size: 11px;
+				text-decoration: underline;
+				&:hover {
+					color: $orange;
+				}
+			}		
+		}
+	}
+}
+
+@include respond-to(small) {
+}
+
+@include respond-to(medium) {
+}
+
+@include respond-to(large) {
+	
+}

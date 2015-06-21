@@ -24,7 +24,7 @@
 		margin-top: 5px;
 		float: left;
 		width: 100%;
-		input {
+		input[type="text"] {
 			@include border-radius($default-border-radius);
 			border: 1px solid $gray-light;
 			color: $ff-blue;
@@ -57,7 +57,7 @@
 		}
 	}
 	.donation {
-		margin-top: 20px;
+		margin-top: 60px;
 		h3 {
 			font-size: 22px;
 		}

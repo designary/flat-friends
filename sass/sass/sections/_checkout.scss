@@ -155,7 +155,7 @@
 			margin-bottom: 0;
 		}
 		.milestone {
-			margin: 0 0 15px;
+			overflow: visible;
 			width: 80%;
 		}
 	}
@@ -193,6 +193,7 @@
 }
 
 @include respond-to(medium) {
+
 }
 
 @include respond-to(large) {

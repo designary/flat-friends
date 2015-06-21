@@ -1,0 +1,38 @@
+/* Egift Voucher */
+
+.egift-voucher {
+	.container-box {
+		margin-top: 30px;
+		padding-top: 20px;
+		width: 100%;
+		
+		.ghost-button {
+			margin-bottom: 20px;
+		}
+	}
+	.form-list {
+		.fields {
+			&:first-child {
+				padding-top: 0;
+			}
+			&:last-child {
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
+
+@include respond-to(small) {
+	.egift-voucher {
+		.container-box {
+			width: 50%;
+		}
+	}
+}
+
+@include respond-to(medium) {
+}
+
+@include respond-to(large) {
+	
+}

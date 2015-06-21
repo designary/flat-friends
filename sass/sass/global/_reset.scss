@@ -60,6 +60,10 @@ ol, ul {
     list-style: none;
 }
 
+sup {
+	font-size: 70%;
+}
+
 strong {
 	font-weight: $bold;
 }
@@ -125,6 +129,9 @@ input::-moz-focus-inner {
 
 input[type="checkbox"] {
 	-webkit-appearance: checkbox;
+}
+input[type="radio"] {
+	-webkit-appearance: radio;
 }
 
 input {

@@ -1,0 +1,43 @@
+/* Checkout Thankyou */
+
+.checkout {
+	.thankyou {
+		.container-box {
+			margin-bottom: 40px;
+			text-align: center;
+			width: calc(100% - 62px);
+		}
+		.order-number {
+			font-size: 18px;
+			font-weight: $semibold;
+			letter-spacing: 0.5px;
+		}
+	}
+	
+}
+
+@include respond-to(small) {
+	.checkout {
+		.thankyou {
+			.container-box {
+				margin: 0 auto;
+				width: 70%;
+			}
+		}	
+	}
+}
+
+@include respond-to(medium) {
+	.checkout {
+		.thankyou {
+			.container-box {
+				margin: 0 auto;
+				width: 50%;
+			}
+		}	
+	}
+}
+
+@include respond-to(large) {
+	
+}

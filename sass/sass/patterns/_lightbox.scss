@@ -12,13 +12,18 @@
 
 .lightbox-component {
 	background-color: $white;
-	height: 280px;
-	left: calc((100% - 580px)/2);
-	padding: 50px;
+	min-height: 280px;
+	left: 0;
+	padding: 30px 10px 10px;
 	position: fixed;
 	top: calc((100% - 400px)/2);
-	width: 500px;
+	width: calc(100% - 20px);
 	z-index: 1001;
+	.row {
+		margin-bottom: 10px;
+		overflow: visible;
+		position: relative;
+	}
 	h1 {
 		color: $ff-blue;
 		font-family: $font-family-alt;
@@ -31,7 +36,8 @@
 		margin-bottom: 20px;
 		padding: 0;
 	}
-	input[type="text"] {
+	input[type="text"],
+	input[type="password"] {
 		@include border-radius(2px);
 		border: 1px solid $gray-light;
 		color: $ff-blue;
@@ -54,6 +60,17 @@
 }
 
 @include respond-to(small) {
+	.lightbox-component {
+		min-height: 280px;
+		left: calc((100% - 580px)/2);
+		padding: 50px;
+		position: fixed;
+		top: calc((100% - 400px)/2);
+		width: 500px;
+		.row {
+			margin-bottom: 0;
+		}
+	}
 }
 
 @include respond-to(medium) {

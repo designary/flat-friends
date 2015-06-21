@@ -3,17 +3,17 @@
 table {
 	color: $ff-blue;
 	width: 100%;
-}
-table.tab-table {
 	tr {
 		border-bottom: 1px solid $gray-light;
 	}
+	.heading {
+		font-weight: $bold;
+	}
+}
+table.tab-table {
 	td {
 		font-size: 11px;
 		padding: 15px 0;
-	}
-	.heading {
-		font-weight: $bold;
 	}
 	.notice {
 		border-bottom: none;
@@ -39,6 +39,35 @@ table.tab-table {
 				text-align: center;
 			}
 		}
+	}
+}
+table.review-table {
+	thead {
+		th {
+			font-size: 11px;
+			font-weight: $bold;
+			padding: 15px 5px;
+			text-align: left;
+		}
+	}
+	tr {
+		border-bottom: 1px solid $gray-light;
+	}
+	td {
+		padding: 15px 5px;	
+		&:nth-child(2) {
+			text-align: right;
+		}
+	}
+	tfoot {
+		background-color: tint($blue, 95%);
+		font-size: 11px;
+		font-weight: $bold;
+	}
+	p {
+		font-size: 11px;
+		line-height: $line-height-loose;
+		padding: 0;
 	}
 }
 
