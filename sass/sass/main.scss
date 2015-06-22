@@ -40,13 +40,16 @@
 
 //Patterns 
 @import "patterns/anchor-list";
+@import "patterns/filter-menu";
 @import "patterns/forms";
 @import "patterns/lightbox";
+@import "patterns/social-icons";
 @import "patterns/tables";
 @import "patterns/tabs";
 @import "patterns/tooltip";
 
 //Sections
+@import "sections/blog";
 @import "sections/checkout";
 @import "sections/checkout-your-details";
 @import "sections/checkout-thankyou";

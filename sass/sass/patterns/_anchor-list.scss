@@ -4,7 +4,7 @@ ol.anchor-list,
 ol.anchor-list-block {
 	list-style-type: none;
 	padding-right: 0;
-	li {
+	> li {
 		counter-increment: step-counter;
 		&::before {
 			color: $ff-blue;
@@ -21,7 +21,7 @@ ol.anchor-list-block {
 ol.anchor-list {
 	display: inline-block;
 	margin: 30px 0 0;
-	li {
+	> li {
 		border-bottom: 1px solid $ff-blue;
 		clear: both;
 		display: inline-block;
@@ -44,7 +44,7 @@ ol.anchor-list {
 ol.anchor-list-block {
 	clear: both;
 	margin: 60px 0 0;
-	li {
+	> li {
 		counter-increment: step-counter;
 		margin-bottom: 20px;
 		&::before {
