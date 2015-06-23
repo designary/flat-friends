@@ -1,0 +1,82 @@
+/* Social Icons */
+
+.social-icons {
+	li {
+		@include border-radius(50%);
+		background-color: $ff-blue;
+		display: inline-block;
+		float: left;
+		height: 25px;
+		margin-right: 8px;
+		position: relative;
+		width: 25px;
+		&.facebook {
+			background-color: $facebook;
+		}
+		&.twitter {
+			background-color: $twitter;
+		}
+		&.tumblr {
+			background-color: $tumblr;
+		}
+		&.googleplus {
+			background-color: $googleplus;
+		}
+		i {
+			left: 6px;
+			margin-right: 5px;
+			position: absolute;
+			top: 5px;
+			&:before {
+				color: $white;
+			}
+			&.fa-facebook {
+				left: 7px;
+			}
+		}
+	}
+}
+
+.circle-icons {
+	@include border-radius(50%);
+	background-color: $ff-blue;
+	display: inline-block;
+	float: left;
+	height: 25px;
+	margin-right: 8px;
+	position: relative;
+	width: 25px;
+	& + .label {
+		margin-left: 30px;
+		margin-top: -4px;
+		a {
+			font-size: 12px;
+			line-height: 1;
+		}
+	}
+	i {
+		left: 6px;
+		margin-right: 5px;
+		position: absolute;
+		top: 5px;
+		&.fa-rss {
+			left: 7px;
+			top: 4px;
+		}
+		&:before {
+			color: $white;
+		}
+	}
+}
+
+
+@include respond-to(small) {
+	
+}
+
+@include respond-to(medium) {
+	
+}
+
+@include respond-to(large) {
+}

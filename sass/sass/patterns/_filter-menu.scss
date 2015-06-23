@@ -1,0 +1,65 @@
+/* Filter Menu */
+
+.filter-menu {
+	width: 100%;
+	.heading h1 {
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+	.filter-button {
+		@extend %btn;
+		margin-bottom: 5px;
+		text-align: center;
+		width: 100%;
+		span i:before {
+			font-size: 11px;
+		}
+	}
+	li {
+		border-bottom: 1px solid $gray-light;
+		padding: 5px 0;
+		a {
+			color: $ff-blue;
+			font-size: 14px;
+		}
+		&:last-child {
+			border: 0;
+		}
+		&.icon {
+			span {
+				float: right;
+				i:before {
+					color: $ff-blue;
+					font-size: 11px;
+				}
+			}
+		}
+		.expand-panel {
+			width: 100%;
+			ul {
+				li {
+					border: 0;
+					padding: 5px 0 0;
+					&:last-child {
+						padding-bottom: 3px;
+					}
+					a {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+		&:hover {
+			> a, div.main > a {
+				color: $orange;
+			}
+			&.icon {
+				span {
+					i:before {
+						color: $orange;
+					}
+				}
+			}
+		}
+	}
+}

@@ -33,13 +33,17 @@
 }
 
 footer, 
+.blog,
 .checkout {
 	 .col-2 {
 		width: 100%;
 	 }
 }
 
-.product-detail, .checkout, .product-grid,  footer {
+.product-detail, 
+.checkout, 
+.product-grid, 
+footer {
 	.col-3 {
 		width: 100%;
 	}
@@ -70,6 +74,11 @@ footer,
 		width: 100%;
 	}
 }
+.blog {
+	.col-10 {
+		width: 100%;
+	}
+}
 
 @include respond-to(small) {
 	@include grid ($columns: 12, $column-width: 42px, $gutter-width: 20px, $prefix: $grid-class-prefix, $fluid: false);
@@ -81,6 +90,7 @@ footer,
 		margin-top: 20px;
 	}
 	footer,
+	.blog,
 	.checkout {
 		.col-2 {
 			margin-left: 20px;
@@ -137,6 +147,15 @@ footer,
 			}
 		}
 	}
+	.blog {
+		.col-10 {
+			margin-left: 20px;
+			width: (42*10)+(20px*9);	
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 @include respond-to(medium) {
@@ -150,6 +169,7 @@ footer,
 		margin-top: 20px;
 	}
 	footer,
+	.blog,
 	.checkout {
 		.col-2 {
 			margin-left: 20px;
@@ -159,7 +179,10 @@ footer,
 			}
 		}
 	}
-	.product-detail, .checkout, .product-grid, footer {
+	.product-detail, 
+	.checkout, 
+	.product-grid, 
+	footer {
 		.col-3 {
 			margin-left: 20px;
 			width: (60*3)+(20px*2);
@@ -206,6 +229,15 @@ footer,
 			}
 		}
 	}
+	.blog {
+		.col-10 {
+			margin-left: 20px;
+			width: (60*10)+(20px*9);	
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 @include respond-to(large) {
@@ -218,14 +250,20 @@ footer,
 			margin-top: 30px;
 		}
 	}
-	footer .col-2 {
-		margin-left: 20px;
-		width: (80*2)+20px;
-		&:first-child {
-			margin-left: 0;
+	footer,
+	.blog {
+	 	.col-2 {
+			margin-left: 20px;
+			width: (80*2)+20px;
+			&:first-child {
+				margin-left: 0;
+			}
 		}
 	}
-	.product-detail, .checkout .product-grid,  footer {
+	.product-detail, 
+	.checkout, 
+	.product-grid, 
+	footer {
 		.col-3 {
 			margin-left: 20px;
 			width: (80*3)+(20px*2);
@@ -267,6 +305,15 @@ footer,
 		.col-9 {
 			margin-left: 20px;
 			width: (80*9)+(20px*8);
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	.blog {
+		.col-10 {
+			margin-left: 20px;
+			width: (80*10)+(20px*9);	
 			&:first-child {
 				margin-left: 0;
 			}

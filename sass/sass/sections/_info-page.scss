@@ -1,6 +1,6 @@
 /* Info Page */
 
-.info-page{
+.info-page {
 	h2 {
 		font-size: 16px;
 		font-weight: $bold;
@@ -14,6 +14,44 @@
 		letter-spacing: 0.5px;
 		margin-top: 30px;
 		text-transform: uppercase;
+	}
+	ul.bulletpoints {
+		color: $ff-blue;
+		list-style-type: disc;
+		li {
+			color: $ff-blue;
+			font-size: 12px;
+			margin-left: 30px;
+			padding: 8px 0 0 5px;
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+	}
+	
+	ul.indent {
+		list-style-type: none;
+		li {
+			color: $ff-blue;
+			font-size: 12px;
+			line-height: $line-height-base;
+			margin-left: 30px;
+			padding: 8px 0 0 5px;
+			&:first-child {
+				padding-top: 0;
+			}
+		}
+	}
+}
+
+.care-guidance {
+	.screenshot {
+		width: 100%;
+		img {
+			display: block;
+			margin: 0 auto;
+			width: 70%;
+		}
 	}
 }
 

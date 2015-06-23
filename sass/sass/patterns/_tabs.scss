@@ -44,7 +44,8 @@
 @include respond-to(small) {
 	.tab-component {
 		.tab-navigation {
-			overflow-x: hidden;
+			margin-bottom: -1px;
+			overflow: hidden;
 			position: relative;
 			z-index: 100;
 			ul {
