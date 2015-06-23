@@ -148,6 +148,7 @@
 				font-size: 12px;
 				margin-right: 20px;
 				padding: 7px 15px 7px 5px;
+				position: relative;
 			}
 			input {
 				@include border-radius(2px);
@@ -155,6 +156,7 @@
 				font-family: $font-family-base;
 				font-size: 12px;
 				padding: 7px 15px 7px 5px;
+				width: auto;
 			}
 		}
 		.cta {
